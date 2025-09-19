@@ -1,0 +1,16 @@
+{% extends 'blog/headers.html' %}
+    {% block content %}
+        <header>
+       <h1> </h1></header>
+        <main>
+        <article>
+            <section>
+                {%load static%}
+                <img src="{% static 'blog/images/cars.png' %}">
+                <h1><b>{{post.title}}</b></h1>
+                <p>{{post.text|safe}} </p>
+            </section>
+    </article>
+    </main>
+    {% endblock %}
+

@@ -1,0 +1,20 @@
+{% extends 'blog/headers.html' %}
+    {% block content %}
+        <header>
+       <h1> series </h1></header>
+        <main>
+        <article>
+        {% for post,partone in part_ones.items %}
+        <a href="{{partone}}" style="color:#000000">
+            <section id="card">
+                {%load static%}
+                <img src="{% static 'blog/images/cars.png' %}">
+                <h1><b>{{post.post_series}}</b></h1>
+                <p>{{post.series_summary}} </p>
+            </section>
+            </a>
+        {% endfor %}
+    </article>
+    </main>
+    {% endblock %}
+

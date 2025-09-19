@@ -1,0 +1,86 @@
+<head>
+{% load static %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'blog/css/Materialize.css' %}">
+
+    <style>
+        body { 
+            background-color : #f4f4f4;
+            text-align: center;
+            font-family: 'Roboto', Georgia;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+    }
+        header {
+            background-color: #e0f0ff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 10px;
+}
+        section#card{
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 9px;
+            box-shadow: 10px 9px 9px 10px rgba(10,10,10,0.5);
+            margin-bottom: 35px;
+            border-radius: 8px;
+            font-size: 20px;
+    
+}
+        section h1 {
+            font-size: 33px;
+}
+        section img{
+            border-radius: 18px;
+            padding: 10px;
+            width: 100%;
+            
+        }
+        section:hover {
+            transform: scale(1.04);
+            transition: transform 0.3s ease-in-out;
+        }
+        nav {
+            background-color : #04BCEF;
+            margin-bottom: 1px;
+    }
+
+    </style>
+</head>
+<body>
+    <nav>
+    <div class="nav-wrapper">
+      <a href="sky_logo.jpg" class="brand-logo">Logo</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">☰ Menu</i></a>
+      <ul class="left hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="site.html">About</a></li>
+        <li><a href="Login.html">Login</a></li>
+        <li><a href="signup.html">sign up</a></li>
+      </ul>
+    </div></div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="/">Home</a></li>
+    <li><a href="/t.me/bullioncyber">Community</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/mobile.html">Contact</a></li>
+  </ul>
+  <body>
+      {% block content %}
+      
+      {% endblock %}
+      <footer>
+          
+      </footer>
+  </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+  });
+</script>
